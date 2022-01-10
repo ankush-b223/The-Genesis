@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+
+* {
+    font-family: Raleway;
+    color: #777;
+}
+
+html body {
+    margin-top: 0px;
+    margin: 2px;
+}
+
+.abt1 {
+    text-align :center;
+    text-decoration: wavy;
+    text-decoration-style: wavy;
+}
+
+.abt2 {
+    color: coral;
+    font-family: Comforter Brush;
+    
+}
+
+.btn-text {
+    font-family: Comforter Brush;
+    font-size: 1.5em;
+
+}
+
+.btn1{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding-top: 10px;
+    cursor: pointer;
+    
+}
+
+.btn2{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.btn3{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.btn4 {
+    background-color: transparent;
+    border: none;
+    opacity: 1  ;
+    cursor: pointer;
+}
+
+.btn5 {
+    background-color: transparent;
+    border: none;
+    opacity: 1  ;
+    cursor: pointer;
+}
+
+.btn6 {
+    background-color: transparent;
+    border: none;
+    opacity: 1  ;
+    cursor: pointer;
+}
+
+.head {
+    background-image: url(Images/Header\ Background.jpg);
+    background-size: cover;
+    padding-bottom: 30px;
+    color: azure;
+}
+
+.top-li li{
+    padding-left: 250px;
+    padding-top: 5px;
+}
+
+.band-name{
+    text-align: center;
+    padding-top: 20px;
+    margin: 0;
+    font-size: 4em;
+    
+}
+
+.b-name{
+    font-family: Comforter Brush ;
+    color: white;
+    font-size: 2em;
+    
+}
+
+.band-img{
+    border-radius: 50%;
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+}
+
+.end{
+    background-image: url(Images/Header\ Background.jpg);
+    background-size: cover;
+    opacity: 1;
+}
+
+.end li{
+    display: inline-block;
+    padding-left: 250px;
+    padding-bottom: 10px;
+}
+
+.nav-main li{
+    display: inline-block;
+}
+
+.sign {
+    text-align: center;
+    color: white;
+    align-content: center;
+    border-radius: 10px;
+    margin : 100px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    background-color: rgb(19, 18, 18);
+    
+}
+
+.footer-text{
+    padding-top: 35px;
+    padding-left: 65px;
+    font-size: 2.5em;
+    font-family: Comforter Brush;
+    text-decoration: underline;
+    color: white;
+}
+
+.get{
+    border: 2px solid rgb(4, 236, 236);
+    margin: 0.68em 15% 30px 15%;
+    margin-top: 20px;
+    margin-right: 200px;
+    color: white;
+    background-color: transparent;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.album{
+    margin-right: 200px;
+    margin-left: 300px;
+}
+
+.play{
+    margin-right: 350px;
+}
+
+.content-img {
+    size: 20%;
+    margin-left: 28em;
+    padding-top: 0.1px;
+    padding-bottom: 1px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.tick-btn {
+    background-color: rgb(24, 22, 22);
+    border: solid black;
+    color: white;
+    cursor: pointer;
+}
+
+.tick-btn:hover {
+    background-color: black;
+}
+
+.tours{
+    text-align:center;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: white;
+    background-color: rgb(19, 18, 18);
+    padding-left: 10px;
+    padding: 1%;
+    padding-top: 0.4%;
+}
+
+.tour-head {
+    text-decoration: underline solid white;
+    padding-bottom: 0.5%;
+    font-family: Comforter Brush;
+    font-size: 2em;
+
+}
+
+.sign-up {
+    font-family: Comforter Brush ;
+    font-size: 2em;
+}
+
+.sign-names {
+    font-family: Raleway; 
+}
+
+.music-title {
+    font-family: Comforter Brush ;
+    font-size: 3em;
+    text-align:center;
+    text-decoration: underline;
+
+}
+
+.store-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.store-title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.store-img {
+    height: 250px;
+}
+
+.store-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.store-price {
+    flex-grow: 1;
+}
+
