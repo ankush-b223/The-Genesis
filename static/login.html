@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+	<title> The Genesis </title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="Images/favicon.ico">
+</head>
+
+<body>
+	<header class="head">
+		<nav class="nav-main">
+			<ul>
+				<section class="top-li">
+
+					<li> <a href="home.html" target="_blank"><button class="btn1 btn-text">Home</button> </a></li>
+					<li> <a href="tours.html" target="_blank"><button class="btn2 btn-text">Tours</button> </a> </li>
+					<li> <a href="store.html" target="_blank"><button class="btn3 btn-text">Store</button> </a> </li>
+
+				</section>
+			</ul>
+
+		</nav>
+		<hr>
+		<h1 class="band-name"> <u class="b-name">The Genesis</u> </h1>
+
+	</header>
+
+    <section>
+
+        <h2>LOGIN!</h2>
+        <form id="login-form">
+            <input placeholder="username" type="text" id="username" > <br>
+
+            <input placeholder="password" type="password" id="password" > <br> <br>
+
+            <input type="submit" value="submit">
+
+            
+        </form>
+
+		<script>
+            //getting form
+            const loginForm = document.getElementById("login-form");
+
+            //on submit click event
+            addEventListener('submit', loginUser);
+
+            //registerUser function call & definitation
+            async function loginUser(event){
+                event.preventDefault();
+
+                //get username & password and store it in variables
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+
+                //await for result from fetch api call 
+                const result = await fetch("/login", {
+                    //method & details of sending data to api
+                    method:"POST",
+                    headers: {
+                        "Content-Type": 'application/json'
+                    },
+                    body: JSON.stringify({
+
+                        username,
+                        password
+                    })
+                    //if api call returns ok give user created success else error
+                }).then((res)=> res.json())
+
+                if(result.status === 'ok'){
+                    alert("Welcome Back!");
+                    window.location.replace('home.html');
+                }else{
+                    alert(result.error);
+                }
+            }
+        </script>
+
+		<div>
+
+			<h3>Forgot password>??</h3>
+			<a href="changePass.html"> <button>Click here!</button> </a>
+
+
+		</div>
+
+        <div>
+            <h3>Not yet registered with us?</h3>
+            <h4> Hop on!! , It's free ;) </h4>
+            <a href="register.html"><button>Register!</button></a>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <hr>
+	<footer class="end">
+		<h3 class="footer-text">The Genesis </h3>
+		<ul>
+			<li> <a href="https://www.facebook.com/backstreetboys/" target="_blank"><button class="btn4" > <img
+							src="Images/facebooklogo.png"> </button> </a> </li>
+			<li> <a href="https://open.spotify.com/artist/5rSXSAkZ67PYJSvpUpkOr7" target="_blank"><button class="btn5"> <img
+							src="Images/spotifylogo.png"> </button> </a></li>
+			<li> <a href="https://www.youtube.com/channel/UC1OR2YNQLZJYFdQjFrPWvVw" target="_blank"><button class="btn6"> <img
+							src="Images/youtubelogo.png"> </button> </a></li>
+
+		</ul>
+	</footer>
+</body>
+
+</html>

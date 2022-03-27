@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+	<title> The Genesis </title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="Images/favicon.ico">
+</head>
+
+<body>
+	<header class="head">
+		<nav class="nav-main">
+			<ul>
+				<section class="top-li">
+
+					<li> <a href="home.html" target="_blank"><button class="btn1 btn-text">Home</button> </a></li>
+					<li> <a href="tours.html" target="_blank"><button class="btn2 btn-text">Tours</button> </a> </li>
+					<li> <a href="store.html" target="_blank"><button class="btn3 btn-text">Store</button> </a> </li>
+
+				</section>
+			</ul>
+
+		</nav>
+		<hr>
+		<h1 class="band-name"> <u class="b-name">The Genesis</u> </h1>
+
+	</header>
+
+    <section>
+
+        <form id="cp-form">
+            <input type="text" id="username" placeholder="Username">
+            <input type="text" id="emailId" placeholder="Email-Id">
+            <input type="submit"  value="submit-value">
+        </form>
+
+    </section>
+
+
+    <script>
+
+        const form = document.getElementById('cp-form');
+
+        addEventListener('submit' , changePass);
+
+        async function changePass(event){
+            event.preventDefault();
+
+            const username = document.getElementById('username');
+            const email = document.getElementById('emailId');
+            
+
+            const result = await fetch('/change-pass',{
+
+                method: 'POST',
+                headers : {
+                    "Content-Type ": 'application/json'
+                },
+                body: JSON.stringify({
+
+                    username,
+                    email 
+
+                })
+
+            }).then((res)=> res.json())
+            
+            if(res.json === 'ok'){
+                
+                alert("password reset email sent!");
+            }
+            else{
+                alert(result.error);                
+            }
+
+        }
+
+    </script>
+
+
+
+
+
+
+    <hr>
+	<footer class="end">
+		<h3 class="footer-text">The Genesis </h3>
+		<ul>
+			<li> <a href="https://www.facebook.com/backstreetboys/" target="_blank"><button class="btn4" > <img
+							src="Images/facebooklogo.png"> </button> </a> </li>
+			<li> <a href="https://open.spotify.com/artist/5rSXSAkZ67PYJSvpUpkOr7" target="_blank"><button class="btn5"> <img
+							src="Images/spotifylogo.png"> </button> </a></li>
+			<li> <a href="https://www.youtube.com/channel/UC1OR2YNQLZJYFdQjFrPWvVw" target="_blank"><button class="btn6"> <img
+							src="Images/youtubelogo.png"> </button> </a></li>
+
+		</ul>
+	</footer>
+</body>
+
+</html>
